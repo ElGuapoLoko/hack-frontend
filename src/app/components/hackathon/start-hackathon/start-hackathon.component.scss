@@ -1,0 +1,33 @@
+@import "~swiper/css";
+@import "~swiper/css/pagination";
+
+.swiper .swiper-pagination {
+    display: none !important;
+}
+
+.titleCarousel {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.heigthCards {
+    height: 30vh;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.imageVideo {
+    height: 8rem;
+    width: 8rem;
+}
+
+.textVideo {
+    font-size: .8rem;
+}
+
+::ng-deep .p-inputtext {
+    width: 100%;
+}

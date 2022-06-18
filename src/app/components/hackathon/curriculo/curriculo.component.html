@@ -1,0 +1,82 @@
+<div class="col-12">
+    <p-card title="Dados pessoais" data-message="Dados pessoais">
+        <div class="col-12 inline-flex">
+            <div class="col-2">
+                <i class="pi pi-file iconMenu"></i>
+            </div>
+            <div class="col-10">
+                <span class="textMenu">Currículo</span>
+            </div>
+        </div>
+
+        <div class="col-12 mb-2">
+                    <span class="p-float-label col-12">
+            <p-multiSelect [showHeader]="false" id="bank" class="selectBankStore"
+                           [options]="civilState" optionLabel="description" optionValue="id"
+                           display="chip"
+                           selectionLimit="1"></p-multiSelect>
+            <label for="bank">Estado civíl</label>
+    </span>
+        </div>
+
+        <div class="col-12 mb-2">
+            <span class="p-float-label col-12">
+                <p-inputNumber class="w-full" id="phone_contact"></p-inputNumber>
+                <label for="phone_contact">Telefone de contato</label>
+            </span>
+        </div>
+        <div class="col-12 mb-2">
+            <span class="p-float-label col-12">
+                <p-inputNumber class="w-full" id="phone_message"></p-inputNumber>
+                <label for="phone_message">Telefone de recado</label>
+            </span>
+        </div>
+        <div class="col-12 mb-2">
+            <span class="p-float-label col-12">
+                 <textarea id="objective" rows="3" class="w-full" style="resize: none;" cols="30"
+                           pInputTextarea></textarea>
+                <label for="objective">Objetivo</label>
+            </span>
+        </div>
+        <div class="col-12 mb-2">
+            <span class="p-float-label col-12">
+                 <textarea id="experienceWork" rows="3" class="w-full" style="resize: none;" cols="30"
+                           pInputTextarea></textarea>
+                <label for="experienceWork">Esperiência Profissional:</label>
+            </span>
+        </div>
+        <div class="col-12 mb-2">
+            <span class="p-float-label col-12">
+                 <textarea id="Hardskils" rows="3" class="w-full" style="resize: none;" cols="30"
+                           pInputTextarea></textarea>
+                <label for="Hardskils">Hardskils:</label>
+            </span>
+        </div>
+        <div class="col-12 mb-2">
+            <span class="p-float-label col-12">
+                 <textarea id="SoftSkils" rows="3" class="w-full" style="resize: none;" cols="30"
+                           pInputTextarea></textarea>
+                <label for="SoftSkils">SoftSkils:</label>
+            </span>
+        </div>
+        <div class="col-12 mb-2">
+            <span class="p-float-label col-12">
+                 <textarea id="voluntarieWork" rows="3" class="w-full" style="resize: none;" cols="30"
+                           pInputTextarea></textarea>
+                <label for="voluntarieWork">Trabalhos Voluntarios:</label>
+            </span>
+        </div>
+        <div class="col-12 mb-2">
+            <span class="p-float-label col-12">
+                 <textarea id="Idiomas" rows="3" class="w-full" style="resize: none;" cols="30"
+                           pInputTextarea></textarea>
+                <label for="Idiomas">Idiomas:</label>
+            </span>
+        </div>
+        <div class="col-12">
+            <div class="col-12 md:col-4">
+                <button pButton pRipple type="button" label="Salvar" class="p-button-success w-full"></button>
+            </div>
+        </div>
+    </p-card>
+</div>

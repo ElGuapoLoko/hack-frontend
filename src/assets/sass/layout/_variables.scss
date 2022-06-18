@@ -1,0 +1,67 @@
+/* General */
+$fontSize:10px;
+$borderRadius:12px;
+$transitionDuration:.2s;
+
+
+::ng-deep .p-multiselect {
+    width: 100%;
+}
+
+::ng-deep .p-inputnumber {
+    width: 100%;
+}
+
+::ng-deep .p-inputtext {
+    width: 100%;
+}
+
+::ng-deep .p-password {
+    width: 100%;
+}
+
+.noHorizontal{
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.noVertical{
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+// Media Query
+$screen-sm-max: 576px;
+$screen-md-max: 768px;
+$screen-lg-max: 992px;
+$screen-xl-max: 1200px;
+$screen-full-hd: 1800px;
+
+@mixin media($screen) {
+    @if $screen == sm {
+        @media screen and (max-width: #{$screen-sm-max}) {
+            @content;
+        }
+    }
+    @if $screen == md {
+        @media screen and (max-width: #{$screen-md-max}) {
+            @content;
+        }
+    }
+    @if $screen == lg {
+        @media screen and (max-width: #{$screen-lg-max}) {
+            @content;
+        }
+    }
+    @if $screen == xl {
+        @media screen and (max-width: #{$screen-xl-max}) {
+            @content;
+        }
+    }
+}
+

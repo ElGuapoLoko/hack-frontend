@@ -1,0 +1,55 @@
+@import "src/assets/sass/layout/variables";
+
+:host ::ng-deep .p-password input {
+    width: 100%;
+    padding: 1rem;
+}
+
+:host ::ng-deep .pi-eye {
+    transform: scale(1.6);
+    margin-right: 1rem;
+    color: var(--primary-color) !important;
+}
+
+:host ::ng-deep .pi-eye-slash {
+    transform: scale(1.6);
+    margin-right: 1rem;
+    color: var(--primary-color) !important;
+}
+
+.colorSingUp {
+    color: #6366F1;
+}
+
+.logo {
+    height: 10rem;
+    width: 15rem;
+}
+
+.inputs {
+    border-radius: 20px;
+    background-color: #E0E0E0;
+}
+
+.textInputs {
+    font-weight: bold;
+    color: #006999;
+}
+
+.buttonSingin {
+    background-color: #E72245;
+}
+
+.buttonSingin:hover {
+    background-color: #E72245 !important;
+}
+
+.colorBackground {
+    background-color: #F5F5F5 !important;
+    @media (max-width: $screen-sm-max) {
+        background-color: white !important;
+    }
+}
+
+
+

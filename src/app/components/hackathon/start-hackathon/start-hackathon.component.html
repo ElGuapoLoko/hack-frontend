@@ -1,0 +1,82 @@
+<div *ngIf="loading" class="mt-4 col-12">
+    <p-skeleton width="100%" height="35rem" borderRadius="16px"></p-skeleton>
+</div>
+<div *ngIf="!loading">
+    <div class="col-12 mt-3">
+          <span class="p-float-label p-input-icon-right col-12">
+            <i class="pi pi-search"></i>
+            <input type="text" id="inputtext-right" pInputText>
+            <label for="inputtext-right">Buscar</label>
+        </span>
+    </div>
+
+    <div class="col-12 mt-2">
+        <span class="titleCarousel">Em alta</span>
+    </div>
+    <div class="col-12 heigthCards">
+        <swiper [slidesPerView]="3" [spaceBetween]="20" [pagination]="{ clickable: true }">
+            <ng-template *ngFor="let video of alta" swiperSlide>
+                <div (click)="seeVideo(video)">
+                    <div class="col-12 text-center">
+                        <img [src]="video.path" class="imageVideo"/>
+                    </div>
+                    <div class="col-12 text-center textVideo">
+                        {{video.title}}
+                    </div>
+                </div>
+            </ng-template>
+        </swiper>
+    </div>
+    <div class="col-12 mt-2">
+        <span class="titleCarousel">Recomendado para você</span>
+    </div>
+    <div class="col-12 heigthCards">
+        <swiper [slidesPerView]="3" [spaceBetween]="20" [pagination]="{ clickable: true }">
+            <ng-template *ngFor="let video of relevantes" swiperSlide>
+                <div (click)="seeVideo(video)">
+                    <div class="col-12 text-center">
+                        <img [src]="video.path" class="imageVideo"/>
+                    </div>
+                    <div class="col-12 text-center textVideo">
+                        {{video.title}}
+                    </div>
+                </div>
+            </ng-template>
+        </swiper>
+    </div>
+    <div class="col-12 mt-2">
+        <span class="titleCarousel">Recentes</span>
+    </div>
+    <div class="col-12 heigthCards">
+        <swiper [slidesPerView]="3" [spaceBetween]="20" [pagination]="{ clickable: true }">
+            <ng-template *ngFor="let video of recentes" swiperSlide>
+                <div (click)="seeVideo(video)">
+                    <div class="col-12 text-center">
+                        <img [src]="video.path" class="imageVideo"/>
+                    </div>
+                    <div class="col-12 text-center textVideo">
+                        {{video.title}}
+                    </div>
+                </div>
+            </ng-template>
+        </swiper>
+    </div>
+    <div class="col-12 mt-2">
+        <span class="titleCarousel">Mais curtidos</span>
+    </div>
+    <div class="col-12 heigthCards mb-4">
+        <swiper [slidesPerView]="3" [spaceBetween]="20" [pagination]="{ clickable: true }">
+            <ng-template *ngFor="let video of curtidos" swiperSlide>
+                <div (click)="seeVideo(video)">
+                    <div class="col-12 text-center">
+                        <img [src]="video.path" class="imageVideo"/>
+                    </div>
+                    <div class="col-12 text-center textVideo">
+                        {{video.title}}
+                    </div>
+                </div>
+            </ng-template>
+        </swiper>
+    </div>
+
+</div>

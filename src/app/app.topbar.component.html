@@ -1,0 +1,40 @@
+<div class="layout-topbar">
+    <a class="layout-topbar-logo" routerLink="/start">
+        <img src="assets/layout/images/hackathon/logo.svg" alt="Logomarca eduplay">
+    </a>
+    <a class="p-link layout-topbar-menu-button layout-topbar-button" alt="botão de ações"
+       title="botão de ações" (click)="op.toggle($event)">
+        <i class="pi pi-bars"></i>
+    </a>
+    <div class="layout-topbar-menu" [ngClass]="{'layout-topbar-menu-mobile-active':appMain.topMenuActive}">
+        <i class="pi pi-bars cursor-pointer" (click)="op.toggle($event)"></i>
+        <p-overlayPanel #op>
+            <ng-template pTemplate>
+                <div (click)="login()" class="col-12 inline-flex cursor-pointer" alt="Ao Vivo" title="login">
+                    <div class="col-2 noHorizontal"><i class="pi pi-user"></i></div>
+                    <div class="col-10 noHorizontal">Login</div>
+                </div>
+                <div (click)="live()" class="col-12 inline-flex cursor-pointer" alt="Ao Vivo" title="Ao Vivo">
+                    <div class="col-2 noHorizontal"><i class="pi pi-play"></i></div>
+                    <div class="col-10 noHorizontal">Ao Vivo</div>
+                </div>
+                <div (click)="video()" class="col-12 inline-flex cursor-pointer" alt="vídeo" title="vídeo">
+                    <div class="col-2 noHorizontal"><i class="pi pi-video"></i></div>
+                    <div class="col-10 noHorizontal">Vídeo</div>
+                </div>
+                <div (click)="audio()" class="col-12 inline-flex cursor-pointer" alt="áudio" title="áudio">
+                    <div class="col-2 noHorizontal"><i class="pi pi-play"></i></div>
+                    <div class="col-10 noHorizontal">Áudio</div>
+                </div>
+                <div (click)="myAccount()" class="col-12 inline-flex cursor-pointer" alt="profile" title="profile">
+                    <div class="col-2 noHorizontal"><i class="pi pi-user"></i></div>
+                    <div class="col-10 noHorizontal">Meu espaço</div>
+                </div>
+<!--                <div (click)="logout()" class="col-12 inline-flex cursor-pointer" alt="sair" title="sair">-->
+<!--                    <div class="col-2 noHorizontal"><i class="pi pi-times"></i></div>-->
+<!--                    <div class="col-10 noHorizontal">Sair</div>-->
+<!--                </div>-->
+            </ng-template>
+        </p-overlayPanel>
+    </div>
+</div>

@@ -1,0 +1,64 @@
+<div class="col-12">
+    <p-card title="Dados pessoais" data-message="Dados pessoais">
+        <div class="col-12 inline-flex">
+            <div class="col-2">
+                <i class="pi pi-user iconMenu"></i>
+            </div>
+            <div class="col-10">
+                <span class="textMenu">Dados pessoais</span>
+            </div>
+        </div>
+
+        <div class="col-12 mb-2">
+
+            <span class="p-float-label">
+            <p-multiSelect [showHeader]="false" id="bank" class="selectBankStore"
+                           [options]="companies" optionLabel="name" optionValue="id"
+                           display="chip"
+                           selectionLimit="1"></p-multiSelect>
+            <label for="bank">Selecione a instituição</label>
+    </span>
+        </div>
+        <div class="col-12 mb-2">
+        <span class="p-float-label col-12">
+            <input type="text" id="graduation" class="w-full" pInputText>
+            <label for="graduation">Graduação</label>
+        </span>
+        </div>
+        <div class="col-12 mb-2">
+            <span class="p-float-label col-12">
+                <p-inputMask id="birth" mask="99/99/9999" class="w-full" slotChar="dd/mm/aaaa"></p-inputMask>
+                <label for="birth">Data de nascimento</label>
+            </span>
+        </div>
+        <div class="col-12 mb-2">
+            <span class="p-float-label col-12">
+                <input type="text" id="motherName" class="w-full" pInputText>
+                <label for="motherName">Nome da Mãe</label>
+            </span>
+        </div>
+        <div class="col-12 mb-2">
+            <span class="p-float-label col-12">
+                <p-inputNumber class="w-full" id="age"></p-inputNumber>
+                <label for="age">Idade</label>
+            </span>
+        </div>
+        <div class="col-12 mb-2 inline-flex justify-content-around align-items-center ">
+            <span>Possui nescessidades especiais?</span>
+            <p-inputSwitch [(ngModel)]="special"></p-inputSwitch>
+        </div>
+
+        <div *ngIf="special" class="col-12 mb-2">
+        <span class="p-float-label col-12">
+            <input type="text" id="description-speacial" class="w-full" pInputText>
+            <label for="description-speacial">Qual?</label>
+        </span>
+        </div>
+
+        <div class="col-12">
+            <div class="col-12 md:col-4">
+                <button pButton pRipple type="button" label="Salvar" class="p-button-success w-full"></button>
+            </div>
+        </div>
+    </p-card>
+</div>
